@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <style>
+  	    img {
+		width: "30%";
+		}
+  </style>
+  </head>
+  <body>
+  	<script>
+
+  		var userName = prompt("What is your first name?");
+
+  		userName.toLowerCase;
+
+  		var xhr = new XMLHttpRequest();	
+
+  		var parser = new DOMParser();
+
+		xhr.onreadystatechange = function() {
+    		if (xhr.readyState == XMLHttpRequest.DONE) {
+    	}
+	}
+
+		function getRequest() {
+
+			xhr.open("GET", "https://gender-api.com/get?name=" + userName + "&key=EEELbyGGRNzdfXJMtU", false);
+
+			xhr.send();
+
+			var jsonObj = xhr.responseText;
+
+			var jsonDoc = JSON.parse(jsonObj)
+		
+			console.log(jsonDoc.gender);
+
+		}
+   		
+   		getRequest();
+
+    </script>
+  </body>
+</html>
